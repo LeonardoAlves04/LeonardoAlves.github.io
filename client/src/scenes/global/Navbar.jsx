@@ -32,7 +32,34 @@ const Navbar = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-      ></Box>
+      >
+        <Box
+          onClick={() => navigate("/")}
+          sx={{ "&:hover": { cursor: "pointer" } }}
+          color={shades.secondary[500]}
+        >
+          ECOMMER
+        </Box>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          columnGap="20px"
+          zIndex="2"
+        >
+          <Iconbutton sx={{ color: "black" }}>
+            <SearchOutlined />
+          </Iconbutton>
+          <Iconbutton sx={{ color: "black" }}>
+            <PersonOutline />
+          </Iconbutton>
+          <Iconbutton sx={{ color: "black" }}>
+            <ShoppingBagOutlined />
+          </Iconbutton>
+          <Iconbutton sx={{ color: "black" }}>
+            <MenuOutlined />
+          </Iconbutton>
+        </Box>
+      </Box>
     </Box>
   );
 };
