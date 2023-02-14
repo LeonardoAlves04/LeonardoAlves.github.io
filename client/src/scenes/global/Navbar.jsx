@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Badge, Box, Iconbutton } from "@mui/material";
+import { Badge, Box, IconButton } from "@mui/material";
 import {
   PersonOutline,
   ShoppingBagOutlined,
@@ -8,7 +8,7 @@ import {
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { shades } from "../../theme";
-import { setIsCartOpen } from "../../state/Index";
+import { setIsCartOpen } from "../../state/index";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -48,18 +48,18 @@ const Navbar = () => {
           columnGap="20px"
           zIndex="2"
         >
-          <Iconbutton sx={{ color: "black" }}>
+          <IconButton sx={{ color: "black" }}>
             <SearchOutlined />
-          </Iconbutton>
-          <Iconbutton sx={{ color: "black" }}>
+          </IconButton>
+          <IconButton sx={{ color: "black" }}>
             <PersonOutline />
-          </Iconbutton>
-          <Iconbutton sx={{ color: "black" }}>
+          </IconButton>
+          <IconButton sx={{ color: "black" }}>
             <ShoppingBagOutlined />
-          </Iconbutton>
-          <Iconbutton sx={{ color: "black" }}>
+          </IconButton>
+          <IconButton sx={{ color: "black" }}>
             <MenuOutlined />
-          </Iconbutton>
+          </IconButton>
         </Box>
       </Box>
     </Box>
