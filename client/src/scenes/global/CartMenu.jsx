@@ -29,7 +29,9 @@ const CartMenu = () => {
   }, 0);
 
   return (
-    <Box //sobreposição do modal
+    // {Sobreposição do modal}
+
+    <Box
       display={isCartOpen ? "block" : "none"}
       backgroundColor="rgba(0,0,0,0.4)"
       position="fixed"
@@ -40,7 +42,8 @@ const CartMenu = () => {
       top="0"
       overflow="auto"
     >
-      <Box //modal
+      {/* {Modal} */}
+      <Box
         position="fixed"
         right="0"
         bottom="0"
@@ -50,6 +53,7 @@ const CartMenu = () => {
       >
         <Box padding="30px" overflow="auto" height="100%">
           {/*cabeçalho do modal*/}
+
           <FlexBox mb="15px">
             <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
@@ -58,6 +62,7 @@ const CartMenu = () => {
           </FlexBox>
 
           {/* lista do carrinho */}
+
           <Box>
             {cart.map((item) => (
               <Box key={`${item.attributes.name}-${item.id}`}>
@@ -72,6 +77,7 @@ const CartMenu = () => {
                   </Box>
 
                   {/* Nome do item*/}
+
                   <Box flex="1 1 60%">
                     <FlexBox mb="5px">
                       <Typography fontWeight="bold">
@@ -88,6 +94,7 @@ const CartMenu = () => {
                     <Typography>{item.attributes.shortDescription}</Typography>
 
                     {/* quantidade de itens no carrihno */}
+
                     <FlexBox m="15px 0">
                       <Box
                         display="flex"
@@ -98,13 +105,53 @@ const CartMenu = () => {
                           onClick={() =>
                             dispatch(decreaseCount({ id: item.id }))
                           }
-                        ></IconButton>
+                        >
+                          <RemoveIcon />
+                        </IconButton>
+                        <Typography>{item.count}</Typography>
+                        <IconButton
+                          onClick={() =>
+                            dispatch(increaseCount({ id: item.id }))
+                          }
+                        >
+                          <AddIcon />
+                        </IconButton>
                       </Box>
                     </FlexBox>
+
+                    {/* {Preço} */}
+                    <Typography fontWeight="bold">
+                      ${item.attributes.price}
+                    </Typography>
                   </Box>
                 </FlexBox>
+                <Divider />
               </Box>
             ))}
+          </Box>
+
+          {/* Actions */}
+          <Box m="20px 0">
+            <FlexBox m="20px 0">
+              <Typography fontWeight="bold">SUBTOTAL</Typography>
+              <Typography fontWeight="bold">${totalPrice}</Typography>
+            </FlexBox>
+            <Button
+              sx={{
+                backgroundColor: shades.primary[400],
+                color: "white",
+                borderRadius: 0,
+                minWidth: "100%",
+                PADDING: "20px 40px",
+                m: "20px 0",
+              }}
+              onClick={() => {
+                navigate("/checkout");
+                dispatch(setIsCartOpen({}));
+              }}
+            >
+              CHECKOUT
+            </Button>
           </Box>
         </Box>
       </Box>
