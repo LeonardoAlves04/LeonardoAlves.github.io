@@ -1,7 +1,8 @@
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import CloseIcon from "@mui/icons-material/Close";
-import AddIcon from "@mui/icons-material/Remove";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
 import styled from "@emotion/styled";
 import { shades } from "../../theme";
 import {
@@ -55,7 +56,7 @@ const CartMenu = () => {
           {/*cabeçalho do modal*/}
 
           <FlexBox mb="15px">
-            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
+            <Typography variant="h3"> Seu carrinho ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
               <CloseIcon />
             </IconButton>
@@ -93,7 +94,7 @@ const CartMenu = () => {
                     </FlexBox>
                     <Typography>{item.attributes.shortDescription}</Typography>
 
-                    {/* quantidade de itens no carrihno */}
+                    {/* quantidade de itens no carrinho */}
 
                     <FlexBox m="15px 0">
                       <Box
@@ -133,8 +134,8 @@ const CartMenu = () => {
           {/* Actions */}
           <Box m="20px 0">
             <FlexBox m="20px 0">
-              <Typography fontWeight="bold">SUBTOTAL</Typography>
-              <Typography fontWeight="bold">${totalPrice}</Typography>
+              <Typography fontWeight="bold">Subtotal</Typography>
+              <Typography fontWeight="bold">R$ {totalPrice}</Typography>
             </FlexBox>
             <Button
               sx={{
@@ -142,7 +143,7 @@ const CartMenu = () => {
                 color: "white",
                 borderRadius: 0,
                 minWidth: "100%",
-                PADDING: "20px 40px",
+                padding: "20px 40px",
                 m: "20px 0",
               }}
               onClick={() => {
@@ -150,7 +151,7 @@ const CartMenu = () => {
                 dispatch(setIsCartOpen({}));
               }}
             >
-              CHECKOUT
+              Fechar
             </Button>
           </Box>
         </Box>
@@ -158,3 +159,5 @@ const CartMenu = () => {
     </Box>
   );
 };
+
+export default CartMenu;
