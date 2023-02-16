@@ -117,12 +117,12 @@ const CartMenu = () => {
                           <AddIcon />
                         </IconButton>
                       </Box>
-                    </FlexBox>
 
-                    {/* {Preço} */}
-                    <Typography fontWeight="bold">
-                      ${item.attributes.price}
-                    </Typography>
+                      {/* {Preço} */}
+                      <Typography fontWeight="bold">
+                        ${item.attributes.price}
+                      </Typography>
+                    </FlexBox>
                   </Box>
                 </FlexBox>
                 <Divider />
