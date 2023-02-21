@@ -34,5 +34,20 @@ const {
   },
 } = image;
 
-return <Box></Box>;
+return (
+  <Box width={width}>
+    <Box
+      position="relative"
+      onMouseOver={() => setIsHovered(true)}
+      onMouseOut={() => setIsHovered(false)}
+    >
+      <img
+        alt={item.name}
+        width="300px"
+        height="400px"
+        src={`http://localhost:1337${url}`}
+      />
+    </Box>
+  </Box>
+);
 export default Item;
