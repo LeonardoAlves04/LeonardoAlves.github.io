@@ -69,7 +69,31 @@ const MainCarousel = () => {
               backgroundAttachment: "fixed",
             }}
           />
-          <Box color="white"></Box>
+          <Box
+            color="white"
+            padding="20px"
+            borderRadius="1px"
+            textAlign="left"
+            backgroundColor="rgb(0,0,0,0.4)"
+            position="absolute"
+            top="46%"
+            left={isNonMobile ? "10%" : "0"}
+            right={isNonMobile ? undefined : "0"}
+            margin={isNonMobile ? undefined : "0 auto"}
+            maxWidth={isNonMobile ? undefined : "240px"}
+          >
+            <Typography color={shades.primary[200]}>
+              -- NOVOS ITENS --{" "}
+            </Typography>
+            <Typography variant="h2">Liquidação de Verão</Typography>
+            <Typography
+              fontWeight="bold"
+              color={shades.secondary[300]}
+              sx={{ textDecoration: "underline" }}
+            >
+              Confira Mais
+            </Typography>
+          </Box>
         </Box>
       ))}
     </Carousel>
