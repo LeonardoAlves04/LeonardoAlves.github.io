@@ -89,7 +89,7 @@ const MainCarousel = () => {
             <Typography
               fontWeight="bold"
               color={shades.secondary[300]}
-              sx={{ textDecoration: "underline" }}
+              sx={{ textDecoration: "underline", cursor: "pointer" }}
             >
               Confira Mais
             </Typography>
