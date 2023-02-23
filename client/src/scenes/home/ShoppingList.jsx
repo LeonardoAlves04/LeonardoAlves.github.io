@@ -26,7 +26,7 @@ const ShoppingList = () => {
   }
 
   useEffect(() => {
-    getItem();
+    getItems();
   }, []);
 
   return <div>Lista de Compras</div>;
