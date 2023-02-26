@@ -80,14 +80,14 @@ const Item = ({ item, width }) => {
         </Box>
       </Box>
 
-      <Box mt="30px">
+      <Box mt="30px" borderRadius="20px">
         <Typography variant="subtitle" color={neutral.dark}>
           {category
-            .replace(/([A-Z])/g, "R$1")
+            .replace(/([A-Z])/g, "$1")
             .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
         <Typography>{name}</Typography>
-        <Typography fontWeight="bold">${price}</Typography>
+        <Typography fontWeight="bold">R${price}</Typography>
       </Box>
     </Box>
   );
