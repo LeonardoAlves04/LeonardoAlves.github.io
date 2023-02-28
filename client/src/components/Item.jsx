@@ -43,11 +43,11 @@ const Item = ({ item, width }) => {
           style={{ cursor: "pointer" }}
         />
         <Box
-          display={isHovered ? "blocked" : "none"}
+          display={isHovered ? "block" : "none"}
           position="absolute"
-          bottom="10%"
+          bottom="5%"
           left="0"
-          width="0"
+          width="100%"
           padding="0 5%"
         >
           <Box display="flex" justifyContent="space-between">
