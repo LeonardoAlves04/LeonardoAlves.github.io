@@ -7,13 +7,13 @@ const Footer = () => {
     palette: { neutral },
   } = useTheme();
   return (
-    <Box mt="70px" p="40px 0" backgroundColor={neutral.light}>
+    <Box mt="70px" p="40px 0" backgroundColor="#F2F2F2">
       <Box
         width="80%"
         margin="auto"
         display="flex"
         justifyContent="space-between"
-        flex-Wrap="wrap"
+        flexWrap="wrap"
         rowGap="30px"
         columnGap="clamp(20px,30px,40px)"
       >
@@ -41,11 +41,14 @@ const Footer = () => {
           <Typography variant="h4" fontWeight="bold" mb="30px">
             Sobre nós
           </Typography>
-          <Typography mb="30px">Carreira</Typography>
+          <Typography cursor="pointer" mb="30px">
+            Carreira
+          </Typography>
           <Typography mb="30px">Nossas Lojas</Typography>
           <Typography mb="30px">Termos</Typography>
           <Typography mb="30px">Politica de Privacidade</Typography>
         </Box>
+
         <Box>
           <Typography variant="h4" fontWeight="bold" mb="30px">
             Atendimento ao Consumidor
@@ -55,6 +58,7 @@ const Footer = () => {
           <Typography mb="30px">Compras em atacado</Typography>
           <Typography mb="30px">Reembolsos</Typography>
         </Box>
+
         <Box width="clamp(20%, 25%, 30%)">
           <Typography variant="h4" fontWeight="bold" mb="30px">
             Contate-nos
@@ -62,6 +66,8 @@ const Footer = () => {
           <Typography mb="30px">
             Empresa muito engraçada, Rua dos Bobos, número 0
           </Typography>
+          <Typography mb="30px">Email: emaildaempresa123@gmail.com</Typography>
+          <Typography mb="30px">(55) 9999-9999</Typography>
         </Box>
       </Box>
     </Box>

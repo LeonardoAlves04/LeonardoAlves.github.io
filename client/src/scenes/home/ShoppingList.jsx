@@ -53,10 +53,10 @@ const ShoppingList = () => {
         TabIndicatorProps={{ sx: { display: isNonMobile ? "block" : "none" } }}
         sx={{ m: "25px", "& .MuiTabs-flexContainer": { flexWrap: "wrap" } }}
       >
-        <Tab label="ALL" value="all" />
-        <Tab label="NEW ARRIVALS" value="newArrivals" />
-        <Tab label="BEST SELLERS" value="bestSellers" />
-        <Tab label="TOP RATED" value="topRated" />
+        <Tab label="TODOS" value="all" />
+        <Tab label="NOVIDADES" value="newArrivals" />
+        <Tab label="MAIS VENDIDOS" value="bestSellers" />
+        <Tab label="MELHORES AVALIADOS" value="topRated" />
       </Tabs>
       <Box
         margin="0 auto"
