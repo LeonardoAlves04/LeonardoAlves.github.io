@@ -14,7 +14,7 @@ const ItemDetails = () => {
   const { itemId } = useParams();
   const [value, setValue] = useState("description");
   const [count, setCount] = useState(1);
-  const [item, seItem] = useState(null);
+  const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
 
   const handleChange = (event, newValue) => {
@@ -23,11 +23,11 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      `http://locaalhost1337/api/items/${itemId}?populate=image`,
+      `http://localhost:1337/api/items/${itemId}?populate=image`,
       { method: "GET" }
     );
-    const itemsJson = await items.json();
-    setItems(itemsJson.data);
+    const itemJson = await item.json();
+    setItems(itemJson.data);
   }
 
   async function getItems() {
@@ -36,13 +36,13 @@ const ItemDetails = () => {
       { method: "GET" }
     );
     const itemsJson = await items.json();
-    dispatch(setItems(itemsJson.data));
+    setItems(itemsJson.data);
   }
 
   useEffect(() => {
     getItem();
     getItems();
-  }, [itemId]);
+  }, [itemId]); //eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Box width="80%" m="80px auto">
@@ -59,7 +59,7 @@ const ItemDetails = () => {
         </Box>
 
         {/* Ações */}
-        <Box flex="1 1 50%" mb="40%">
+        <Box flex="1 1 50%" mb="40px">
           <Box display="flex" justifyContent="space-between">
             <Box>Home/Item</Box>
             <Box>Prev Next</Box>
@@ -73,6 +73,7 @@ const ItemDetails = () => {
             </Typography>
           </Box>
 
+          {/* BOTÃO E CONTAGEM */}
           <Box display="flex" alignItems="center" minHeight="50px">
             <Box
               display="flex"
@@ -96,43 +97,57 @@ const ItemDetails = () => {
                 color: "white",
                 borderRadius: "0",
                 minWidth: "150px",
+                padding: "10px 40px",
               }}
+              onClick={() => dispatch(addToCart({ item: { ...item, count } }))}
             >
               ADICIONAR AO CARRIHNO
             </Button>
+          </Box>
 
-            <Box>
-              <Box m="20px 0 5px 0" display="flex">
-                <FavoriteBorderOutlinedIcon />
-                <Typography sx={{ ml: "5px" }}>
-                  ADICIONAR A LISTA DE DESEJOS
-                </Typography>
-              </Box>
+          <Box>
+            <Box m="20px 0 5px 0" display="flex">
+              <FavoriteBorderOutlinedIcon />
+              <Typography sx={{ ml: "5px" }}>
+                ADICIONAR A LISTA DE DESEJOS
+              </Typography>
             </Box>
             <Typography>CATEGORIAS: {item?.attributes?.category}</Typography>
           </Box>
         </Box>
-      </Box>
 
-      {/* INFORMAÇÕES */}
-      <Box m="20px 0">
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="DESCRIÇÃO" value="description" />
-          <Tab label="AVALIAÇÕES" value="reviews" />
-        </Tabs>
-      </Box>
-      <Box display="flex" flexWrap="wrap" gap="15px">
-        {value === "description" && (
-          <div>{item?.attributes?.longDescription}</div>
-        )}
-        {value === "reviews" && <div>reviews</div>}
-      </Box>
+        {/* INFORMAÇÕES */}
+        <Box m="20px 0">
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label="DESCRIÇÃO" value="description" />
+            <Tab label="AVALIAÇÕES" value="reviews" />
+          </Tabs>
+        </Box>
+        <Box display="flex" flexWrap="wrap" gap="15px">
+          {value === "description" && (
+            <div>{item?.attributes?.longDescription}</div>
+          )}
+          {value === "reviews" && <div>reviews</div>}
+        </Box>
 
-      {/* RELATED ITEMS  */}
-      <Box mt="50px" width="100%">
-        <Typography variant="h3" fontWeight="bold">
-          Produtos Relacionados
-        </Typography>
+        {/* ITENS RELACIONADOS */}
+
+        <Box mt="50px" width="100%">
+          <Typography variant="h3" fontWeight="bold">
+            Produtos Relacionados
+          </Typography>
+          <Box
+            mt="20px"
+            display="flex"
+            flexWrap="wrap"
+            columnGap="1.33%"
+            justifyContent="space-between"
+          >
+            {items.slice(0, 4).map((item, i) => (
+              <Item key={`${item.name}-${i}`} item={item} />
+            ))}
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
