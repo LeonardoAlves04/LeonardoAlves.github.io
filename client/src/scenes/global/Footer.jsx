@@ -41,9 +41,7 @@ const Footer = () => {
           <Typography variant="h4" fontWeight="bold" mb="30px">
             Sobre nós
           </Typography>
-          <Typography cursor="pointer" mb="30px">
-            Carreira
-          </Typography>
+          <Typography mb="30px">Carreira</Typography>
           <Typography mb="30px">Nossas Lojas</Typography>
           <Typography mb="30px">Termos</Typography>
           <Typography mb="30px">Politica de Privacidade</Typography>
