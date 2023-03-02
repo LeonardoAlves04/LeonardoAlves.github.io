@@ -17,17 +17,17 @@ const ItemDetails = () => {
   const [item, seItem] = useState(null);
   const [items, setItems] = useState([]);
 
-  const handleChange = () => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   async function getItem() {
     const item = await fetch(
       `http://locaalhost1337/api/items/${itemId}?populate=image`,
-      { method: GET }
+      { method: "GET" }
     );
     const itemsJson = await items.json();
-    setItems(itemJson.data);
+    setItems(itemsJson.data);
   }
 
   async function getItems() {
@@ -98,10 +98,41 @@ const ItemDetails = () => {
                 minWidth: "150px",
               }}
             >
-              Add to cart
+              ADICIONAR AO CARRIHNO
             </Button>
+
+            <Box>
+              <Box m="20px 0 5px 0" display="flex">
+                <FavoriteBorderOutlinedIcon />
+                <Typography sx={{ ml: "5px" }}>
+                  ADICIONAR A LISTA DE DESEJOS
+                </Typography>
+              </Box>
+            </Box>
+            <Typography>CATEGORIAS: {item?.attributes?.category}</Typography>
           </Box>
         </Box>
+      </Box>
+
+      {/* INFORMAÇÕES */}
+      <Box m="20px 0">
+        <Tabs value={value} onChange={handleChange}>
+          <Tab label="DESCRIÇÃO" value="description" />
+          <Tab label="AVALIAÇÕES" value="reviews" />
+        </Tabs>
+      </Box>
+      <Box display="flex" flexWrap="wrap" gap="15px">
+        {value === "description" && (
+          <div>{item?.attributes?.longDescription}</div>
+        )}
+        {value === "reviews" && <div>reviews</div>}
+      </Box>
+
+      {/* RELATED ITEMS  */}
+      <Box mt="50px" width="100%">
+        <Typography variant="h3" fontWeight="bold">
+          Produtos Relacionados
+        </Typography>
       </Box>
     </Box>
   );
