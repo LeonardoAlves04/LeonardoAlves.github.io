@@ -27,7 +27,7 @@ const ItemDetails = () => {
       { method: "GET" }
     );
     const itemJson = await item.json();
-    setItems(itemJson.data);
+    setItem(itemJson.data);
   }
 
   async function getItems() {
@@ -66,7 +66,9 @@ const ItemDetails = () => {
           </Box>
 
           <Box m="65px 0 25px 0">
-            <Typography variant="h3">{item?.attributes?.name}</Typography>
+            <Typography variant="h3" mb="15px">
+              {item?.attributes?.name}
+            </Typography>
             <Typography>${item?.attributes?.price}</Typography>
             <Typography sx={{ mt: "20px" }}>
               {item?.attributes?.longDescription}
@@ -95,58 +97,58 @@ const ItemDetails = () => {
               sx={{
                 backgroundColor: "#222222",
                 color: "white",
-                borderRadius: "0",
+                borderRadius: 0,
                 minWidth: "150px",
                 padding: "10px 40px",
               }}
               onClick={() => dispatch(addToCart({ item: { ...item, count } }))}
             >
-              ADICIONAR AO CARRIHNO
+              ADICIONAR AO CARRINHO
             </Button>
           </Box>
 
           <Box>
             <Box m="20px 0 5px 0" display="flex">
               <FavoriteBorderOutlinedIcon />
-              <Typography sx={{ ml: "5px" }}>
+              <Typography sx={{ ml: "5px", mb: "10px" }}>
                 ADICIONAR A LISTA DE DESEJOS
               </Typography>
             </Box>
-            <Typography>CATEGORIAS: {item?.attributes?.category}</Typography>
+            <Typography>CATEGORIA: {item?.attributes?.category}</Typography>
           </Box>
         </Box>
+      </Box>
 
-        {/* INFORMAÇÕES */}
-        <Box m="20px 0">
-          <Tabs value={value} onChange={handleChange}>
-            <Tab label="DESCRIÇÃO" value="description" />
-            <Tab label="AVALIAÇÕES" value="reviews" />
-          </Tabs>
-        </Box>
-        <Box display="flex" flexWrap="wrap" gap="15px">
-          {value === "description" && (
-            <div>{item?.attributes?.longDescription}</div>
-          )}
-          {value === "reviews" && <div>reviews</div>}
-        </Box>
+      {/* INFORMAÇÕES */}
+      <Box m="20px 0">
+        <Tabs value={value} onChange={handleChange}>
+          <Tab label="DESCRIÇÃO" value="description" />
+          <Tab label="AVALIAÇÕES" value="reviews" />
+        </Tabs>
+      </Box>
+      <Box display="flex" flexWrap="wrap" gap="15px">
+        {value === "description" && (
+          <div>{item?.attributes?.longDescription}</div>
+        )}
+        {value === "reviews" && <div>reviews</div>}
+      </Box>
 
-        {/* ITENS RELACIONADOS */}
+      {/* ITENS RELACIONADOS */}
 
-        <Box mt="50px" width="100%">
-          <Typography variant="h3" fontWeight="bold">
-            Produtos Relacionados
-          </Typography>
-          <Box
-            mt="20px"
-            display="flex"
-            flexWrap="wrap"
-            columnGap="1.33%"
-            justifyContent="space-between"
-          >
-            {items.slice(0, 4).map((item, i) => (
-              <Item key={`${item.name}-${i}`} item={item} />
-            ))}
-          </Box>
+      <Box mt="50px" width="100%">
+        <Typography variant="h3" fontWeight="bold">
+          Produtos Relacionados
+        </Typography>
+        <Box
+          mt="20px"
+          display="flex"
+          flexWrap="wrap"
+          columnGap="1.33%"
+          justifyContent="space-between"
+        >
+          {items.slice(0, 4).map((item, i) => (
+            <Item key={`${item.name}-${i}`} item={item} />
+          ))}
         </Box>
       </Box>
     </Box>
