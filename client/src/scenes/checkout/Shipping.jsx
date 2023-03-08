@@ -1,4 +1,4 @@
-import { Box, Checkbox, FormControlLabel, Typography } from "@mui/material";
+import { Box, Checkbox, FormControl, FormControlLabel, Typography } from "@mui/material";
 import AdressForm from "./AddressForm";
 
 const Shipping = ({
@@ -24,7 +24,25 @@ Informações de cobrança
             handleBlur={handleBlur}
             handleChange={handleChange}/>
         </Box>
-        <Box mb="20px"></Box>
+        <Box mb="20px">
+          <FormControlLabel
+            label="Mesmo endereço da entrega"
+            control={
+            <Checkbox
+                defaultChecked
+                value={values.shippingAddress.isSameAddress}
+                onChange={()=>
+                setFieldValue(
+                    "shippingAddress.isSameAddress",
+                    !values.shippingAdress.isSameAddress
+                    )
+                }
+            />
+            }
+          />
+        </Box>
+
+        {/* shipping form */}
      </Box>   
     )
 };
