@@ -20,7 +20,20 @@ handleChange,
     );
 
     const formattedHelper = (field) =>
-    getIn(touched, formattedName)
+    getIn(touched, formattedName(field)) && getIn (errors, formattedName(field));
+
+    return(
+        <Box
+        display="grid"
+        gap="15px"
+        gridTemplateColumns="reapt(4, minmax(0, 1fr))"
+        sx={{
+            "& > div" : {gridColumn : isNonMobile ? undefined : "span 4"}
+        }}
+        > 
+
+        </Box>
+    )
 };
 
 export default AddressForm;

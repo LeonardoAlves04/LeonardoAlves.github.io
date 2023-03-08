@@ -18,12 +18,13 @@ Informações de cobrança
             </Typography>
             <AdressForm 
             type="billingAddress"
-            value={values.billingAddress}
+            values={values.billingAddress}
             errors={errors}
             touched={touched}
             handleBlur={handleBlur}
             handleChange={handleChange}/>
         </Box>
+        
         <Box mb="20px">
           <FormControlLabel
             label="Mesmo endereço da entrega"
