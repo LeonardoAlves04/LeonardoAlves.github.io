@@ -24,14 +24,14 @@ Informações de cobrança
             handleBlur={handleBlur}
             handleChange={handleChange}/>
         </Box>
-        
+
         <Box mb="20px">
           <FormControlLabel
             label="Mesmo endereço da entrega"
             control={
             <Checkbox
                 defaultChecked
-                value={values.shippingAddress.isSameAddress}
+                values={values.shippingAddress.isSameAddress}
                 onChange={()=>
                 setFieldValue(
                     "shippingAddress.isSameAddress",
