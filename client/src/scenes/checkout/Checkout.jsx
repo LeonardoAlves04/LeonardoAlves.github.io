@@ -46,32 +46,32 @@ const checkoutSchema = [
     }),
     shippingAdress: yup.object().shape({
       isSameAddress: yup.boolean(),
-      firstName: yup.string().when("isSameAdress", {
+      firstName: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
-      lastName: yup.string().when("isSameAdress", {
+      lastName: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
-      country: yup.string().when("isSameAdress", {
+      country: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
-      street1: yup.string().when("isSameAdress", {
+      street1: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
       street2: yup.string(),
-      city: yup.string().when("isSameAdress", {
+      city: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
-      state: yup.string().when("isSameAdress", {
+      state: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
-      zipCode: yup.string().when("isSameAdress", {
+      zipCode: yup.string().when("isSameAddress", {
         is: false,
         then: yup.string().required("required"),
       }),
