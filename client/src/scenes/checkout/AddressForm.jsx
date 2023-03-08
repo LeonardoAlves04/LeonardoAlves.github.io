@@ -3,7 +3,7 @@ import { getIn } from "formik";
 
 const AddressForm = ({
   type,
-  value,
+  values,
   errors,
   touched,
   handleBlur,
@@ -13,7 +13,7 @@ const AddressForm = ({
 
   const formattedName = (field) => `${type}.${field}`;
 
-  const formattedErro = (field) =>
+  const formattedError = (field) =>
     Boolean(
       getIn(touched, formattedName(field)) &&
         getIn(errors, formattedName(field))
@@ -109,7 +109,7 @@ const AddressForm = ({
         label="Zip Code"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.firstName}
+        value={values.zipCode}
         name={formattedName("zipCode")}
         error={formattedError("zipCode")}
         helperText={formattedHelper("zipCode")}

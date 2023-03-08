@@ -3,6 +3,7 @@ import { Box, Button, Stepper, Step, StepLabel } from "@mui/material";
 import { Formik } from "formik";
 import { useState } from "react";
 import * as yup from "yup";
+import Shipping from "./Shipping";
 import { shades } from "../../theme";
 
 const initialValues = {
@@ -120,7 +121,7 @@ const Checkout = () => {
             setFieldValue,
           }) => (
             <form onSubmit={handleSubmit}>
-              {isFirst && (
+              {isFirstStep && (
                 <Shipping
                   values={values}
                   errors={errors}
