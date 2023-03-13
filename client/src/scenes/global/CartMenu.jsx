@@ -151,7 +151,7 @@ const CartMenu = () => {
                 dispatch(setIsCartOpen({}));
               }}
             >
-              Fechar
+              Pagamento
             </Button>
           </Box>
         </Box>

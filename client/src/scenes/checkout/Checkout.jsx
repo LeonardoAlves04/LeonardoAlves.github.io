@@ -95,48 +95,47 @@ const Checkout = () => {
 
   async function makePayment(values) {}
 
-  return (
-    <Box width="80%" m="100px auto">
-      <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
-        <Step>
-          <StepLabel>Cobrança</StepLabel>
-        </Step>
-        <Step>
-          <StepLabel>Pagamento</StepLabel>
-        </Step>
-      </Stepper>
-      <Box>
-        <Formik
-          onSubmit={handleFormSubmit}
-          initialValues={initialValues}
-          validationSchema={checkoutSchema[activeStep]}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleBlur,
-            handleChange,
-            handleSubmit,
-            setFieldValue,
-          }) => (
-            <form onSubmit={handleSubmit}>
-              {isFirstStep && (
-                <Shipping
-                  values={values}
-                  errors={errors}
-                  touched={touched}
-                  handleBlur={handleBlur}
-                  handleChange={handleChange}
-                  setFieldValue={setFieldValue}
-                />
-              )}
-            </form>
-          )}
-        </Formik>
-      </Box>
+  return;
+  <Box width="80%" m="100px auto">
+    <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
+      <Step>
+        <StepLabel>Cobrança</StepLabel>
+      </Step>
+      <Step>
+        <StepLabel>Pagamento</StepLabel>
+      </Step>
+    </Stepper>
+    <Box>
+      <Formik
+        onSubmit={handleFormSubmit}
+        initialValues={initialValues}
+        validationSchema={checkoutSchema[activeStep]}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          setFieldValue,
+        }) => (
+          <form onSubmit={handleSubmit}>
+            {isFirstStep && (
+              <Shipping
+                values={values}
+                errors={errors}
+                touched={touched}
+                handleBlur={handleBlur}
+                handleChange={handleChange}
+                setFieldValue={setFieldValue}
+              />
+            )}
+          </form>
+        )}
+      </Formik>
     </Box>
-  );
+  </Box>;
 };
 
 export default Checkout;
