@@ -84,13 +84,13 @@ const checkoutSchema = [
 ];
 
 const Checkout = () => {
-  const [activeStep, setActive] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
   const cart = useSelector((state) => state.cart.cart);
   const isFirstStep = activeStep === 0;
   const isSecondStep = activeStep === 1;
 
   const handleFormSubmit = async (value, actions) => {
-    setActive(activeStep + 1);
+    setActiveStep(activeStep + 1);
   };
 
   async function makePayment(values) {}
