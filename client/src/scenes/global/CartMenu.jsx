@@ -121,7 +121,7 @@ const CartMenu = () => {
 
                       {/* {Preço} */}
                       <Typography fontWeight="bold">
-                        ${item.attributes.price}
+                        R$ {item.attributes.price}
                       </Typography>
                     </FlexBox>
                   </Box>
@@ -151,7 +151,7 @@ const CartMenu = () => {
                 dispatch(setIsCartOpen({}));
               }}
             >
-              Pagamento
+              COMPRAR AGORA
             </Button>
           </Box>
         </Box>
