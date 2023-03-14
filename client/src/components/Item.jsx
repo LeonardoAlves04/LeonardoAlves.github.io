@@ -74,19 +74,14 @@ const Item = ({ item, width }) => {
               }}
               sx={{ backgroundColor: shades.primary[300], color: "white" }}
             >
-              Add to Cart
+              Adicionar ao carrinho
             </Button>
           </Box>
         </Box>
       </Box>
 
-      <Box mt="30px" borderRadius="20px">
-        <Typography variant="subtitle" color={neutral.dark}>
-          {category
-            .replace(/([A-Z])/g, "$1")
-            .replace(/^./, (str) => str.toUpperCase())}
-        </Typography>
-        <Typography>{name}</Typography>
+      <Box mt="5px" borderRadius="20px">
+        <Typography sx={{ mb: "10px" }}>{name}</Typography>
         <Typography fontWeight="bold">R${price}</Typography>
       </Box>
     </Box>

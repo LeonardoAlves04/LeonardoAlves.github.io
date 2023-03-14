@@ -95,8 +95,8 @@ const ItemDetails = () => {
 
             <Button
               sx={{
-                backgroundColor: "#222222",
-                color: "white",
+                backgroundColor: "grey",
+                color: "black",
                 borderRadius: 0,
                 minWidth: "150px",
                 padding: "10px 40px",
@@ -110,11 +110,10 @@ const ItemDetails = () => {
           <Box>
             <Box m="20px 0 5px 0" display="flex">
               <FavoriteBorderOutlinedIcon />
-              <Typography sx={{ ml: "5px", mb: "10px" }}>
+              <Typography sx={{ ml: "5px", mb: "10px", cursor: "pointer" }}>
                 ADICIONAR A LISTA DE DESEJOS
               </Typography>
             </Box>
-            <Typography>CATEGORIA: {item?.attributes?.category}</Typography>
           </Box>
         </Box>
       </Box>
@@ -130,7 +129,7 @@ const ItemDetails = () => {
         {value === "description" && (
           <div>{item?.attributes?.longDescription}</div>
         )}
-        {value === "reviews" && <div>reviews</div>}
+        {value === "reviews" && <div>Avaliações dos nossos clientes</div>}
       </Box>
 
       {/* ITENS RELACIONADOS */}

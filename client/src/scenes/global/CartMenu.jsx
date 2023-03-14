@@ -12,6 +12,7 @@ import {
   setIsCartOpen,
 } from "../../state";
 import { useNavigate } from "react-router-dom";
+import Checkout from "../checkout/Checkout";
 
 const FlexBox = styled(Box)`
   display: flex;
@@ -139,8 +140,8 @@ const CartMenu = () => {
             </FlexBox>
             <Button
               sx={{
-                backgroundColor: shades.primary[400],
-                color: "white",
+                backgroundColor: "grey",
+                color: "black",
                 borderRadius: 0,
                 minWidth: "100%",
                 padding: "20px 40px",
