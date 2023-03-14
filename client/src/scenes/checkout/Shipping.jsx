@@ -13,7 +13,7 @@ const Shipping = ({
     <Box m="30px auto">
       {/* Formulário de cobrança  */}
       <Box>
-        <Typography sx={{ mb: "15px" }} fontSize="18px">
+        <Typography component={"span"} sx={{ mb: "15px" }} fontSize="18px">
           Informações de cobrança
         </Typography>
         <AddressForm
@@ -47,7 +47,7 @@ const Shipping = ({
       {/* shipping form */}
       {!values.shippingAddress.isSameAddress && (
         <Box>
-          <Typography sx={{ mb: "15px" }} fontSize="18px">
+          <Typography component={"span"} sx={{ mb: "15px" }} fontSize="18px">
             Informações de entrega
           </Typography>
           <AddressForm
