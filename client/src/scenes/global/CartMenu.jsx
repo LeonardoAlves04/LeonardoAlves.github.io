@@ -57,9 +57,7 @@ const CartMenu = () => {
           {/*cabeçalho do modal*/}
 
           <FlexBox mb="15px">
-            <Typography component={"span"} variant="h3">
-              Seu carrinho ({cart.length})
-            </Typography>
+            <Typography variant="h3">Seu carrinho ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
               <CloseIcon />
             </IconButton>
@@ -84,7 +82,7 @@ const CartMenu = () => {
 
                   <Box flex="1 1 60%">
                     <FlexBox mb="5px">
-                      <Typography component={"span"} fontWeight="bold">
+                      <Typography fontWeight="bold">
                         {item.attributes.name}
                       </Typography>
                       <IconButton
@@ -112,7 +110,7 @@ const CartMenu = () => {
                         >
                           <RemoveIcon />
                         </IconButton>
-                        <Typography component={"span"}>{item.count}</Typography>
+                        <Typography>{item.count}</Typography>
                         <IconButton
                           onClick={() =>
                             dispatch(increaseCount({ id: item.id }))
@@ -123,7 +121,7 @@ const CartMenu = () => {
                       </Box>
 
                       {/* {Preço} */}
-                      <Typography component={"span"} fontWeight="bold">
+                      <Typography fontWeight="bold">
                         R$ {item.attributes.price}
                       </Typography>
                     </FlexBox>
@@ -137,12 +135,8 @@ const CartMenu = () => {
           {/* Actions */}
           <Box m="20px 0">
             <FlexBox m="20px 0">
-              <Typography component={"span"} fontWeight="bold">
-                Subtotal
-              </Typography>
-              <Typography component={"span"} fontWeight="bold">
-                R$ {totalPrice}
-              </Typography>
+              <Typography fontWeight="bold">Subtotal</Typography>
+              <Typography fontWeight="bold">R$ {totalPrice}</Typography>
             </FlexBox>
             <Button
               sx={{
