@@ -61,7 +61,9 @@ const Item = ({ item, width }) => {
               <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
                 <RemoveIcon />
               </IconButton>
-              <Typography color={shades.primary[300]}>{count}</Typography>
+              <Typography variant={"body2"} color={shades.primary[300]}>
+                {count}
+              </Typography>
               <IconButton onClick={() => setCount(count + 1)}>
                 <AddIcon />
               </IconButton>
@@ -81,8 +83,12 @@ const Item = ({ item, width }) => {
       </Box>
 
       <Box mt="5px" borderRadius="20px">
-        <Typography sx={{ mb: "10px" }}>{name}</Typography>
-        <Typography fontWeight="bold">R${price}</Typography>
+        <Typography variant={"body2"} sx={{ mb: "10px" }}>
+          {name}
+        </Typography>
+        <Typography variant={"body2"} fontWeight="bold">
+          R${price}
+        </Typography>
       </Box>
     </Box>
   );
