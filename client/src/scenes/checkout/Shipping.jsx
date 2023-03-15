@@ -47,7 +47,7 @@ const Shipping = ({
       {/* shipping form */}
       {!values.shippingAddress.isSameAddress && (
         <Box>
-          <Typography component={"span"} sx={{ mb: "15px" }} fontSize="18px">
+          <Typography sx={{ mb: "15px" }} fontSize="18px">
             Informações de entrega
           </Typography>
           <AddressForm
