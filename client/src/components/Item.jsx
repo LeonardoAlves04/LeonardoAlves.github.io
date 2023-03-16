@@ -44,7 +44,6 @@ const Item = ({ item, width }) => {
         />
         <Box
           display={isHovered ? "block" : "none"}
-          component
           position="absolute"
           bottom="5%"
           left="0"

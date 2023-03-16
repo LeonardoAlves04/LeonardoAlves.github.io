@@ -26,7 +26,7 @@ const Footer = () => {
           >
             ECOMMER
           </Typography>
-          <div>
+          <span>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -34,7 +34,7 @@ const Footer = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum."
-          </div>
+          </span>
         </Box>
 
         <Box>
@@ -62,7 +62,7 @@ const Footer = () => {
             Contate-nos
           </Typography>
           <Typography mb="30px">
-            Empresa muito engraçada, Rua dos Bobos, número 0
+            Empresa XXXXXXXX, Rua dos Bobos, número 0
           </Typography>
           <Typography mb="30px">Email: emaildaempresa123@gmail.com</Typography>
           <Typography mb="30px">(55) 9999-9999</Typography>
