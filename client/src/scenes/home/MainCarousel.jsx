@@ -83,7 +83,7 @@ const MainCarousel = () => {
             maxWidth={isNonMobile ? undefined : "240px"}
           >
             <Typography color={shades.primary[200]}>
-              -- NOVOS ITENS --{" "}
+              -- NOVOS ITENS --
             </Typography>
             <Typography variant="h2">Liquidação de Verão</Typography>
             <Typography
@@ -91,7 +91,7 @@ const MainCarousel = () => {
               color={shades.secondary[300]}
               sx={{ textDecoration: "underline", cursor: "pointer" }}
             >
-              <Typography mt="10px">Confira Mais</Typography>
+              Confira Mais
             </Typography>
           </Box>
         </Box>
