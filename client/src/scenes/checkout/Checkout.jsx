@@ -7,7 +7,7 @@ import Shipping from "./Shipping";
 import { shades } from "../../theme";
 
 const initialValues = {
-  billingAdress: {
+  billingAddress: {
     firstName: "",
     lastName: "",
     country: "",
@@ -17,7 +17,7 @@ const initialValues = {
     state: "",
     zipCode: "",
   },
-  shippingAdress: {
+  shippingAddress: {
     isSameAddress: true,
     firstName: "",
     lastName: "",
@@ -34,7 +34,7 @@ const initialValues = {
 
 const checkoutSchema = [
   yup.object().shape({
-    billingAdress: yup.object().shape({
+    billingAddress: yup.object().shape({
       firstName: yup.string().required("required"),
       lastName: yup.string().required("required"),
       country: yup.string().required("required"),
@@ -44,7 +44,7 @@ const checkoutSchema = [
       state: yup.string().required("required"),
       zipCode: yup.string().required("required"),
     }),
-    shippingAdress: yup.object().shape({
+    shippingAddress: yup.object().shape({
       isSameAddress: yup.boolean(),
       firstName: yup.string().when("isSameAddress", {
         is: false,
