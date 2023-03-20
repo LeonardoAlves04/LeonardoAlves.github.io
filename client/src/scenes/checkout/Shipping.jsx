@@ -13,7 +13,7 @@ const Shipping = ({
     <Box m="30px auto">
       {/* Formulário de cobrança  */}
       <Box>
-        <Typography variant={"body2"} sx={{ mb: "15px" }} fontSize="18px">
+        <Typography sx={{ mb: "15px" }} fontSize="18px">
           Informações de cobrança
         </Typography>
         <AddressForm
