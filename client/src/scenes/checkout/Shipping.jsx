@@ -3,8 +3,8 @@ import AddressForm from "./AddressForm";
 
 const Shipping = ({
   values,
-  errors,
   touched,
+  errors,
   handleBlur,
   handleChange,
   setFieldValue,
@@ -19,8 +19,8 @@ const Shipping = ({
         <AddressForm
           type="billingAddress"
           values={values.billingAddress}
-          errors={errors}
           touched={touched}
+          errors={errors}
           handleBlur={handleBlur}
           handleChange={handleChange}
         />
@@ -47,14 +47,14 @@ const Shipping = ({
       {/* shipping form */}
       {!values.shippingAddress.isSameAddress && (
         <Box>
-          <Typography variant={"body2"} sx={{ mb: "15px" }} fontSize="18px">
+          <Typography sx={{ mb: "15px" }} fontSize="18px">
             Informações de entrega
           </Typography>
           <AddressForm
             type="shippingAddress"
             values={values.shippingAddress}
-            errors={errors}
             touched={touched}
+            errors={errors}
             handleBlur={handleBlur}
             handleChange={handleChange}
           />
