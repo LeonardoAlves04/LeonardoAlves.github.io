@@ -6,6 +6,11 @@ import * as yup from "yup";
 import { shades } from "../../theme";
 import Shipping from "./Shipping";
 import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+  "pk_test_51Mo9IdEvGHJfN2RqUbDgWE5PnHMVxV1mDTfYHJCRTQmjxkUfgyDBwd6i4hd2uDhQieyDleTcypfXLWNxSJ2ZHGls00x79NrfDt"
+);
 
 const initialValues = {
   billingAddress: {
@@ -107,7 +112,13 @@ const Checkout = () => {
     actions.setTouched({});
   };
 
-  async function makePayment(values) {}
+  async function makePayment(values) {
+    const stripe = await stripePromise;
+    const requestBody = {
+      userName: [values.firstName, values.lastName].join(""),
+      email: values.email,
+    };
+  }
 
   return (
     <Box width="80%" m="100px auto">

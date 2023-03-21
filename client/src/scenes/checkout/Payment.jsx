@@ -1,14 +1,10 @@
-import { Box, Typography } from "@mui/material";
-import TextField from "@mui/material/TextField";
+import { Box, Typography, TextField } from "@mui/material";
 
 const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
   return (
     <Box m="30px 0">
-      {/* CONTACT INFO */}
       <Box>
-        <Typography sx={{ mb: "15px" }} fontSize="18px">
-          Contact Info
-        </Typography>
+        <Typography>Informações de Contato</Typography>
         <TextField
           fullWidth
           type="text"
@@ -24,13 +20,13 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
         <TextField
           fullWidth
           type="text"
-          label="Phone Number"
+          label="Número de Telefone"
           onBlur={handleBlur}
           onChange={handleChange}
-          value={values.phoneNumber}
-          name="phoneNumber"
-          error={!!touched.phoneNumber && !!errors.phoneNumber}
-          helperText={touched.phoneNumber && errors.phoneNumber}
+          value={values.numeroDeTelefone}
+          name="email"
+          error={!!touched.numeroDeTelefone && !!errors.numeroDeTelefone}
+          helperText={touched.numeroDeTelefone && errors.numeroDeTelefone}
           sx={{ gridColumn: "span 4" }}
         />
       </Box>
