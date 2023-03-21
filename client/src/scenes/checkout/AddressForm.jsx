@@ -34,97 +34,97 @@ const AddressForm = ({
       <TextField
         fullWidth
         type="text"
-        label="First Name"
+        label="Nome"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.firstName}
-        name={formattedName("firstName")}
-        error={formattedError("firstName")}
-        helperText={formattedHelper("firstName")}
+        value={values.Nome}
+        name={formattedName("Nome")}
+        error={formattedError("Nome")}
+        helperText={formattedHelper("Nome")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="Last Name"
+        label="Sobrenome"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.lastName}
-        name={formattedName("lastName")}
-        error={formattedError("lastName")}
-        helperText={formattedHelper("lastName")}
+        value={values.Sobrenome}
+        name={formattedName("Sobrenome")}
+        error={formattedError("Sobrenome")}
+        helperText={formattedHelper("Sobrenome")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="Country"
+        label="País"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.country}
-        name={formattedName("country")}
-        error={formattedError("country")}
-        helperText={formattedHelper("country")}
+        value={values.País}
+        name={formattedName("País")}
+        error={formattedError("País")}
+        helperText={formattedHelper("País")}
         sx={{ gridColumn: "span 4" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="Street Address"
+        label="Rua"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.street1}
-        name={formattedName("street1")}
-        error={formattedError("street1")}
-        helperText={formattedHelper("street1")}
+        value={values.Rua}
+        name={formattedName("Rua")}
+        error={formattedError("Rua")}
+        helperText={formattedHelper("Rua")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="Street Address 2 (optional)"
+        label="Rua 2 (opcional)"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.street2}
-        name={formattedName("street2")}
-        error={formattedError("street2")}
-        helperText={formattedHelper("street2")}
+        value={values.Rua2}
+        name={formattedName("Rua2")}
+        error={formattedError("Rua2")}
+        helperText={formattedHelper("Rua2")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="City"
+        label="Cidade"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.city}
-        name={formattedName("city")}
-        error={formattedError("city")}
-        helperText={formattedHelper("city")}
+        value={values.cidade}
+        name={formattedName("cidade")}
+        error={formattedError("cidade")}
+        helperText={formattedHelper("cidade")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="State"
+        label="Estado"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.state}
-        name={formattedName("state")}
-        error={formattedError("state")}
-        helperText={formattedHelper("state")}
+        value={values.etado}
+        name={formattedName("estado")}
+        error={formattedError("estado")}
+        helperText={formattedHelper("estado")}
         sx={{ gridColumn: "1fr" }}
       />
       <TextField
         fullWidth
         type="text"
-        label="Zip Code"
+        label="CEP"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.zipCode}
-        name={formattedName("zipCode")}
-        error={formattedError("zipCode")}
-        helperText={formattedHelper("zipCode")}
+        value={values.CEP}
+        name={formattedName("CEP")}
+        error={formattedError("CEP")}
+        helperText={formattedHelper("CEP")}
         sx={{ gridColumn: "1fr" }}
       />
     </Box>

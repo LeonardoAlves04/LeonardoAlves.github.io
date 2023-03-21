@@ -3,9 +3,9 @@ import { Box, Button, Stepper, Step, StepLabel } from "@mui/material";
 import { Formik } from "formik";
 import { useState } from "react";
 import * as yup from "yup";
+import { shades } from "../../theme";
 import Shipping from "./Shipping";
 import Payment from "./Payment";
-import { shades } from "../../theme";
 
 const initialValues = {
   billingAddress: {
@@ -109,77 +109,78 @@ const Checkout = () => {
 
   async function makePayment(values) {}
 
-  return;
-  <Box width="80%" m="100px auto">
-    <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
-      <Step>
-        <StepLabel>Cobrança</StepLabel>
-      </Step>
-      <Step>
-        <StepLabel>Pagamento</StepLabel>
-      </Step>
-    </Stepper>
-    <Box>
-      <Formik
-        onSubmit={handleFormSubmit}
-        initialValues={initialValues}
-        validationSchema={checkoutSchema[activeStep]}
-      >
-        {({
-          values,
-          errors,
-          touched,
-          handleBlur,
-          handleChange,
-          handleSubmit,
-          setFieldValue,
-        }) => (
-          <form onSubmit={handleSubmit}>
-            {isFirstStep && (
-              <Shipping
-                values={values}
-                errors={errors}
-                touched={touched}
-                handleBlur={handleBlur}
-                handleChange={handleChange}
-                setFieldValue={setFieldValue}
-              />
-            )}
-            {isSecondStep && (
-              <Payment
-                values={values}
-                errors={errors}
-                touched={touched}
-                handleBlur={handleBlur}
-                handleChange={handleChange}
-                setFieldValue={setFieldValue}
-              />
-            )}
-            <Box display="flex" justifyContent="space-between" gap="50px">
-              {isSecondStep && (
-                <Button
-                  fullWidth
-                  type="submit"
-                  color="primary"
-                  variant="contained"
-                  sx={{
-                    backgroundColor: shades.primary[400],
-                    boxShadow: "none",
-                    color: "white",
-                    borderRadius: 0,
-                    padding: "15px 40px",
-                  }}
-                  onClick={() => setActiveStep(activeStep - 1)}
-                >
-                  {isFirstStep ? "Voltar" : "Fazer"}
-                </Button>
+  return (
+    <Box width="80%" m="100px auto">
+      <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
+        <Step>
+          <StepLabel>Cobrança</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Pagamento</StepLabel>
+        </Step>
+      </Stepper>
+      <Box>
+        <Formik
+          onSubmit={handleFormSubmit}
+          initialValues={initialValues}
+          validationSchema={checkoutSchema[activeStep]}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleBlur,
+            handleChange,
+            handleSubmit,
+            setFieldValue,
+          }) => (
+            <form onSubmit={handleSubmit}>
+              {isFirstStep && (
+                <Shipping
+                  values={values}
+                  errors={errors}
+                  touched={touched}
+                  handleBlur={handleBlur}
+                  handleChange={handleChange}
+                  setFieldValue={setFieldValue}
+                />
               )}
-            </Box>
-          </form>
-        )}
-      </Formik>
+              {isSecondStep && (
+                <Payment
+                  values={values}
+                  errors={errors}
+                  touched={touched}
+                  handleBlur={handleBlur}
+                  handleChange={handleChange}
+                  setFieldValue={setFieldValue}
+                />
+              )}
+              <Box display="flex" justifyContent="space-between" gap="50px">
+                {isSecondStep && (
+                  <Button
+                    fullWidth
+                    type="submit"
+                    color="primary"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: shades.primary[400],
+                      boxShadow: "none",
+                      color: "white",
+                      borderRadius: 0,
+                      padding: "15px 40px",
+                    }}
+                    onClick={() => setActiveStep(activeStep - 1)}
+                  >
+                    {isFirstStep ? "Voltar" : "Fazer o pedido"}
+                  </Button>
+                )}
+              </Box>
+            </form>
+          )}
+        </Formik>
+      </Box>
     </Box>
-  </Box>;
+  );
 };
 
 export default Checkout;

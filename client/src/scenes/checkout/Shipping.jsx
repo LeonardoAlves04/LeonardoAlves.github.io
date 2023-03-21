@@ -40,7 +40,7 @@ const Shipping = ({
               }
             />
           }
-          label="Same for Shipping Address"
+          label="O mesmo para endereço de entrega"
         />
       </Box>
 
