@@ -115,7 +115,7 @@ const Checkout = () => {
   async function makePayment(values) {
     const stripe = await stripePromise;
     const requestBody = {
-      userName: [values.firstName, values.lastName].join(""),
+      userName: [values.firstName, values.lastName].join(" "),
       email: values.email,
       products: cart.map(({ id, count }) => ({
         id,
@@ -125,7 +125,7 @@ const Checkout = () => {
 
     const response = await fetch("http://localhost:1337/api/orders", {
       method: "POST",
-      headers: { "Content-Type": "aplication/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
     });
 
@@ -185,11 +185,10 @@ const Checkout = () => {
                 {isSecondStep && (
                   <Button
                     fullWidth
-                    type="submit"
                     color="primary"
                     variant="contained"
                     sx={{
-                      backgroundColor: shades.primary[400],
+                      backgroundColor: shades.primary[200],
                       boxShadow: "none",
                       color: "white",
                       borderRadius: 0,
@@ -197,9 +196,25 @@ const Checkout = () => {
                     }}
                     onClick={() => setActiveStep(activeStep - 1)}
                   >
-                    {isFirstStep ? "Voltar" : "Fazer o pedido"}
+                    Back
                   </Button>
                 )}
+                <Button
+                  fullWidth
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  sx={{
+                    backgroundColor: shades.primary[400],
+                    boxShadow: "none",
+                    color: "white",
+                    borderRadius: 0,
+                    padding: "15px 40px",
+                  }}
+                  onClick={() => setActiveStep(activeStep - 1)}
+                >
+                  {isFirstStep ? "Próximo" : "Fazer Pedido"}
+                </Button>
               </Box>
             </form>
           )}
