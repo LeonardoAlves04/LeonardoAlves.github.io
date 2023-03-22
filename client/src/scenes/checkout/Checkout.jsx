@@ -117,6 +117,10 @@ const Checkout = () => {
     const requestBody = {
       userName: [values.firstName, values.lastName].join(""),
       email: values.email,
+      products: cart.map(({ id, count }) => ({
+        id,
+        count,
+      })),
     };
   }
 
