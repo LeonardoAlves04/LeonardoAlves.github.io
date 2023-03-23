@@ -37,10 +37,10 @@ const AddressForm = ({
         label="Nome"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.nome}
-        name={formattedName("nome")}
-        error={formattedError("nome")}
-        helperText={formattedHelper("nome")}
+        value={values.firstName}
+        name={formattedName("firstName")}
+        error={formattedError("firstName")}
+        helperText={formattedHelper("firstName")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
@@ -49,10 +49,10 @@ const AddressForm = ({
         label="Sobrenome"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.sobrenome}
-        name={formattedName("sobrenome")}
-        error={formattedError("sobrenome")}
-        helperText={formattedHelper("sobrenome")}
+        value={values.lastName}
+        name={formattedName("lastName")}
+        error={formattedError("lastName")}
+        helperText={formattedHelper("lastName")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
@@ -61,10 +61,10 @@ const AddressForm = ({
         label="País"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.país}
-        name={formattedName("país")}
-        error={formattedError("país")}
-        helperText={formattedHelper("país")}
+        value={values.country}
+        name={formattedName("country")}
+        error={formattedError("country")}
+        helperText={formattedHelper("country")}
         sx={{ gridColumn: "span 4" }}
       />
       <TextField
@@ -73,10 +73,10 @@ const AddressForm = ({
         label="Rua"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.rua}
-        name={formattedName("rua")}
-        error={formattedError("rua")}
-        helperText={formattedHelper("rua")}
+        value={values.street1}
+        name={formattedName("street1")}
+        error={formattedError("street1")}
+        helperText={formattedHelper("street1")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
@@ -85,10 +85,10 @@ const AddressForm = ({
         label="Rua 2 (opcional)"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.rua2}
-        name={formattedName("rua2")}
-        error={formattedError("rua2")}
-        helperText={formattedHelper("rua2")}
+        value={values.street2}
+        name={formattedName("street2")}
+        error={formattedError("street2")}
+        helperText={formattedHelper("street2")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
@@ -97,10 +97,10 @@ const AddressForm = ({
         label="Cidade"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.cidade}
-        name={formattedName("cidade")}
-        error={formattedError("cidade")}
-        helperText={formattedHelper("cidade")}
+        value={values.city}
+        name={formattedName("city")}
+        error={formattedError("city")}
+        helperText={formattedHelper("city")}
         sx={{ gridColumn: "span 2" }}
       />
       <TextField
@@ -109,10 +109,10 @@ const AddressForm = ({
         label="Estado"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.estado}
-        name={formattedName("estado")}
-        error={formattedError("estado")}
-        helperText={formattedHelper("estado")}
+        value={values.state}
+        name={formattedName("state")}
+        error={formattedError("state")}
+        helperText={formattedHelper("state")}
         sx={{ gridColumn: "1fr" }}
       />
       <TextField
@@ -121,10 +121,10 @@ const AddressForm = ({
         label="CEP"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.cep}
-        name={formattedName("cep")}
-        error={formattedError("cep")}
-        helperText={formattedHelper("cep")}
+        value={values.zipCode}
+        name={formattedName("zipCode")}
+        error={formattedError("zipCode")}
+        helperText={formattedHelper("zipCode")}
         sx={{ gridColumn: "1fr" }}
       />
     </Box>
