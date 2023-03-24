@@ -128,7 +128,6 @@ const Checkout = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
     });
-
     const session = await response.json();
     await stripe.redirectToCheckout({
       sessionId: session.id,
@@ -196,7 +195,7 @@ const Checkout = () => {
                     }}
                     onClick={() => setActiveStep(activeStep - 1)}
                   >
-                    Back
+                    Voltar
                   </Button>
                 )}
                 <Button
@@ -211,7 +210,6 @@ const Checkout = () => {
                     borderRadius: 0,
                     padding: "15px 40px",
                   }}
-                  onClick={() => setActiveStep(activeStep - 1)}
                 >
                   {isFirstStep ? "Próximo" : "Fazer Pedido"}
                 </Button>

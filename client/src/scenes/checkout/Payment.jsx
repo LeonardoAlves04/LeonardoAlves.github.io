@@ -4,7 +4,7 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
   return (
     <Box m="30px 0">
       <Box>
-        <Typography>Informações de Contato</Typography>
+        <Typography sx={{ mb: "30px" }}>Informações de Contato</Typography>
         <TextField
           fullWidth
           type="text"
@@ -23,10 +23,10 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
           label="Número de Telefone"
           onBlur={handleBlur}
           onChange={handleChange}
-          value={values.numeroDeTelefone}
-          name="email"
-          error={!!touched.numeroDeTelefone && !!errors.numeroDeTelefone}
-          helperText={touched.numeroDeTelefone && errors.numeroDeTelefone}
+          value={values.phoneNumber}
+          name="phoneNumber"
+          error={!!touched.phoneNumber && !!errors.phoneNumber}
+          helperText={touched.phoneNumber && errors.phoneNumber}
           sx={{ gridColumn: "span 4" }}
         />
       </Box>
