@@ -9,7 +9,7 @@ import Shipping from "./Shipping";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(
-  "pk_test_51LgU7yConHioZHhlAcZdfDAnV9643a7N1CMpxlKtzI1AUWLsRyrord79GYzZQ6m8RzVnVQaHsgbvN1qSpiDegoPi006QkO0Mlc"
+  "pk_test_51Mo9IdEvGHJfN2RqUbDgWE5PnHMVxV1mDTfYHJCRTQmjxkUfgyDBwd6i4hd2uDhQieyDleTcypfXLWNxSJ2ZHGls00x79NrfDt"
 );
 
 const Checkout = () => {
@@ -62,10 +62,10 @@ const Checkout = () => {
     <Box width="80%" m="100px auto">
       <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
         <Step>
-          <StepLabel>Billing</StepLabel>
+          <StepLabel>Cobrança</StepLabel>
         </Step>
         <Step>
-          <StepLabel>Payment</StepLabel>
+          <StepLabel>Pagamento</StepLabel>
         </Step>
       </Stepper>
       <Box>
@@ -119,7 +119,7 @@ const Checkout = () => {
                     }}
                     onClick={() => setActiveStep(activeStep - 1)}
                   >
-                    Back
+                    Voltar
                   </Button>
                 )}
                 <Button
@@ -135,7 +135,7 @@ const Checkout = () => {
                     padding: "15px 40px",
                   }}
                 >
-                  {!isSecondStep ? "Next" : "Place Order"}
+                  {!isSecondStep ? "Próximo" : "Fazer Pedido"}
                 </Button>
               </Box>
             </form>
