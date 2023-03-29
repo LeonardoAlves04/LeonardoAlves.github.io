@@ -62,10 +62,10 @@ const Checkout = () => {
     <Box width="80%" m="100px auto">
       <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
         <Step>
-          <StepLabel>Cobrança</StepLabel>
+          <StepLabel>Billing</StepLabel>
         </Step>
         <Step>
-          <StepLabel>Pagamento</StepLabel>
+          <StepLabel>Payment</StepLabel>
         </Step>
       </Stepper>
       <Box>
@@ -119,7 +119,7 @@ const Checkout = () => {
                     }}
                     onClick={() => setActiveStep(activeStep - 1)}
                   >
-                    Voltar
+                    Back
                   </Button>
                 )}
                 <Button
@@ -135,7 +135,7 @@ const Checkout = () => {
                     padding: "15px 40px",
                   }}
                 >
-                  {!isSecondStep ? "Próximo" : "Fazer Pedido"}
+                  {!isSecondStep ? "Next" : "Place Order"}
                 </Button>
               </Box>
             </form>
