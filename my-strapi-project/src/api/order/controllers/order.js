@@ -25,7 +25,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
                             },
                             unit_amount: item.price * 100,
                         },
-                        quantity: product.count
+                        quantity: product.count,
                     }
                 })
             );

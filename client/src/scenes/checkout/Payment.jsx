@@ -4,7 +4,9 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
   return (
     <Box m="30px 0">
       <Box>
-        <Typography sx={{ mb: "30px" }}>Informações de Contato</Typography>
+        <Typography sx={{ mb: "30px" }} fontSize="18px">
+          Informações de Contato
+        </Typography>
         <TextField
           fullWidth
           type="text"
