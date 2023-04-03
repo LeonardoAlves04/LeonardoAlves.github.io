@@ -119,7 +119,7 @@ const Checkout = () => {
                     }}
                     onClick={() => setActiveStep(activeStep - 1)}
                   >
-                    Back
+                    Voltar
                   </Button>
                 )}
                 <Button
@@ -135,7 +135,7 @@ const Checkout = () => {
                     padding: "15px 40px",
                   }}
                 >
-                  {!isSecondStep ? "Next" : "Place Order"}
+                  {!isSecondStep ? "Próximo" : "Fazer pedido"}
                 </Button>
               </Box>
             </form>
