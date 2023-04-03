@@ -32,7 +32,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
 
             const session = await stripe.checkout.sessions.create({
                 payment_method_types: ["card"],
-                costumer_email: email,
+                customer_email: email,
                 mode: "payment",
                 success_url: "http://localhost:3000/checkout/success",
                 cancel_url: "http://localhost:3000",
@@ -45,8 +45,7 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
 
             return { id: session.id };
         } catch (error) {
-            ctx.response.status = 500;
-            return { error: { message: "There was a problem creating the charge." } };
+            console.log("erroooooooor: ", error)
         }
     },
 }));
