@@ -11,9 +11,7 @@ const Subscribe = () => {
         <MarkedEmailReadOutlinedIcon fontSize="large" />
       </IconButton>
       <Typography variant="h3"> Se inscreva na nossa Newsletter</Typography>
-      <Typography>
-        e receba um cupom de R$30 reais para sua primeira compra
-      </Typography>
+      <Typography>e receba um cupom de 10% para sua primeira compra</Typography>
       <Box
         p="2px 4px"
         m="15px auto"

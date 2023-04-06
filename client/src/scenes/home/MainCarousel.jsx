@@ -85,7 +85,9 @@ const MainCarousel = () => {
             <Typography color={shades.primary[200]}>
               -- NOVOS ITENS --
             </Typography>
-            <Typography variant="h2">Liquidação de Verão</Typography>
+            <Typography sx={{ mb: "15px" }} variant="h2">
+              Liquidação de Verão
+            </Typography>
             <Typography
               fontWeight="bold"
               color={shades.secondary[300]}

@@ -62,7 +62,7 @@ const Footer = () => {
             Contate-nos
           </Typography>
           <Typography mb="30px">
-            Empresa XXXXXXXX, Rua dos Bobos, número 0
+            Empresa Ecommer, Rua dos Bobos, número 0
           </Typography>
           <Typography mb="30px">Email: emaildaempresa123@gmail.com</Typography>
           <Typography mb="30px">(55) 9999-9999</Typography>
