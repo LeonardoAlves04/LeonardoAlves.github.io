@@ -1,1 +1,1 @@
-# Site de um ecommerce feito em React (strapi no Back-End)
+# Ecommerce feito em React (strapi no Back-End)
