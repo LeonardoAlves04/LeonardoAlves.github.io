@@ -26,7 +26,7 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route exact path="/*" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="item/:itemId" element={<ItemDetails />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="checkout/success" element={<Confirmation />} />
