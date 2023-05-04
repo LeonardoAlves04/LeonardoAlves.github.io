@@ -22,7 +22,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <div className="app">
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={"/ecommerceReact"}>
         <Navbar />
         <ScrollToTop />
         <Routes>
