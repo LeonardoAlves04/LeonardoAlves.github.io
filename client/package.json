@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://LeonardoAlves.github.io/LeonardoAlves04.github.io",
+  "homepage": "https://github.com/LeonardoAlves04/LeonardoAlves04.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
