@@ -8,6 +8,7 @@ import { themes } from "./theme";
 import { Provider } from 'react-redux';
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./state";
+import { BrowserRouter } from 'react-router-dom';
 
 const store = configureStore({
   reducer: { cart: cartReducer },
@@ -19,7 +20,9 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={themes}>
         <CssBaseline />
-        <App />
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   </React.StrictMode >
