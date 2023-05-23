@@ -20,9 +20,7 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={themes}>
         <CssBaseline />
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <App />
-        </BrowserRouter>
+        <App />
       </ThemeProvider>
     </Provider>
   </React.StrictMode >
