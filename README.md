@@ -10,11 +10,11 @@
 ![3](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/a3fef03c-5cec-4a58-945d-c2b42dfead3f)
 
 * Carrinho com os produtos:
-
+![Captura de Tela (211)](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/eb593e10-8b3a-4848-aa29-dc47d357f7d5)
 
 * Formulários para compra:
 ![6](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/3c3f2df9-ab93-46b6-8284-65ef5310ba37)
 ![8](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/a85228f0-874f-45ba-ae09-2334781c47bb)
 
-* Área de pagamento com strapi
+* Área de pagamento com strapi:
 ![7](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/52ea55c1-5789-4468-9afc-878e16da02a8)
