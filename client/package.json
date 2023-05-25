@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "npm run start",
-    "build": "npm run build build",
+    "build": "npm run build",
     "test": "npm run test",
     "eject": "npm run eject"
   },
