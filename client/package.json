@@ -27,7 +27,9 @@
     "start": "npm run start",
     "build": "npm run build",
     "test": "npm run test",
-    "eject": "npm run eject"
+    "eject": "npm run eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
