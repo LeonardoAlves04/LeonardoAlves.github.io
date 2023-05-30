@@ -1,6 +1,6 @@
 # Ecommerce feito com React, React router, e utilizando strapi no back-end. 
 
-*Link do projeto:
+*Link do projeto: https://leonardoalves04.github.io/ecommerceReact/
 
 #
 
