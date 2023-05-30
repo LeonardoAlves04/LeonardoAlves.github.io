@@ -25,11 +25,10 @@
     "yup": "^1.0.0"
   },
   "scripts": {
-    "start": "npm run start",
-    "test": "npm run test",
-    "eject": "npm run eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react scripts eject"
   },
   "eslintConfig": {
     "extends": [
