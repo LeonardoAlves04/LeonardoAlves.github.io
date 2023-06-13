@@ -3,7 +3,6 @@ module.exports = [
   'strapi::security',
   {
     name: 'strapi::cors',
-    enabled: true,
     config: {
       origin: '*',
       expose: ['WWW-Authenticate', 'Server-Authorization'],
