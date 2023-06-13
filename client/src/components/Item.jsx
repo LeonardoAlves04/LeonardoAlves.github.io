@@ -38,7 +38,7 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src={`${process.env.REACT_APP_STRAPI_URL}${url}`}
+          src={`ecommerce-react-iwkvknu9n-leonardoalves04.vercel.app${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
