@@ -11,13 +11,13 @@ const ShoppingList = () => {
   const items = useSelector((state) => state.cart.items);
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (newValue) => {
     setValue(newValue);
   };
 
   async function getItems() {
     const items = await fetch(
-      `${process.env.REACT_APP_STRAPI_URL}/api/items?populate=image`,
+      "http://localhost:1337/api/items?populate=image",
       { method: "GET" }
     );
     const itemsJson = await items.json();
