@@ -3,7 +3,7 @@ import { Badge, Box, IconButton } from "@mui/material";
 import {
   PersonOutline,
   ShoppingBagOutlined,
-  MenuOutlined,
+  Phone,
   SearchOutlined,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
@@ -49,7 +49,9 @@ const Navbar = () => {
           zIndex="2"
         >
           <IconButton sx={{ color: "black" }}>
-            <SearchOutlined />
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5535991255868">
+              <Phone />
+            </a>
           </IconButton>
           <IconButton sx={{ color: "black" }}>
             <PersonOutline />
@@ -75,9 +77,6 @@ const Navbar = () => {
               <ShoppingBagOutlined />
             </IconButton>
           </Badge>
-          <IconButton sx={{ color: "black" }}>
-            <MenuOutlined />
-          </IconButton>
         </Box>
       </Box>
     </Box>
