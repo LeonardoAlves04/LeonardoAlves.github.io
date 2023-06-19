@@ -3,12 +3,12 @@ import { Badge, Box, IconButton } from "@mui/material";
 import {
   PersonOutline,
   ShoppingBagOutlined,
-  Phone,
-  SearchOutlined,
+  LocalPhoneOutlined,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state/index";
+import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -48,9 +48,9 @@ const Navbar = () => {
           columnGap="20px"
           zIndex="2"
         >
-          <IconButton sx={{ color: "black" }}>
+          <IconButton sx={{ textDecoration: "none" }}>
             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5535991255868">
-              <Phone />
+              <LocalPhoneOutlined />
             </a>
           </IconButton>
           <IconButton sx={{ color: "black" }}>

@@ -4,10 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { shades } from "../../theme";
-import { blue } from "@mui/material/colors";
 
 // importando todas as imagens de uma vez
-
 const importAll = (r) =>
   r.keys().reduce((acc, item) => {
     acc[item.replace("./", "")] = r(item);
@@ -42,7 +40,7 @@ const MainCarousel = () => {
           <NavigateBeforeIcon sx={{ fontSize: 40 }} />
         </IconButton>
       )}
-      renderArrowNext={(onClickHandler, hasNext, label) => (
+      renderArrowNext={(onClickHandler) => (
         <IconButton
           onClick={onClickHandler}
           sx={{
@@ -89,10 +87,7 @@ const MainCarousel = () => {
             <Typography sx={{ mb: "15px" }} variant="h2">
               Liquidação de Verão
             </Typography>
-            <Typography
-              fontWeight="bold"
-              sx={{ textDecoration: "none", color: "red", cursor: "pointer" }}
-            >
+            <Typography fontWeight="bold">
               <a href="https://github.com/LeonardoAlves04/ecommerceReact">
                 Confira Mais
               </a>

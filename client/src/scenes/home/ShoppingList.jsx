@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Box, Typography, Tab, Tabs, useMediaQuery } from "@mui/material";
 import Item from "../../components/Item";
 import { setItems } from "../../state";
-import { useSelect } from "@mui/base";
 
 const ShoppingList = () => {
   const dispatch = useDispatch();
