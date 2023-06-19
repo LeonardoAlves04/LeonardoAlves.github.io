@@ -178,7 +178,7 @@ const checkoutSchema = [
       firstName: yup.string().required("campo obrigatório"),
       lastName: yup.string().required("campo obrigatório"),
       country: yup.string().required("campo obrigatório"),
-      street1: yup.string().required("required"),
+      street1: yup.string().required("campo obrigatório"),
       street2: yup.string(),
       city: yup.string().required("campo obrigatório"),
       state: yup.string().required("campo obrigatório"),

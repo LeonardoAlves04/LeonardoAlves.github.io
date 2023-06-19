@@ -1,0 +1,89 @@
+import { Box, useMediaQuery, TextField, Button } from "@mui/material";
+import { shades } from "../../theme";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const SignIn = ({ type, values, errors, touched, handleBlur }) => {
+  const isNonMobile = useMediaQuery("(min-width:600px)");
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [CEP, setCEP] = useState("");
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+
+  return (
+    <Box
+      display="grid"
+      gap="15px"
+      sx={{
+        "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
+        margin: "auto",
+      }}
+    >
+      <TextField
+        fullWidth
+        type="text"
+        label="Nome"
+        onBlur={handleBlur}
+        onChange={(e) => setFirstName(e.target.value)}
+        value={firstName}
+        sx={{
+          marginTop: "150px",
+          gridColumn: "2",
+          width: "700px",
+        }}
+      />
+      <TextField
+        fullWidth
+        type="text"
+        label="Sobrenome"
+        onBlur={handleBlur}
+        onChange={(e) => setLastName(e.target.value)}
+        value={lastName}
+        sx={{ gridColumn: "2", width: "700px" }}
+      />
+      <TextField
+        fullWidth
+        type="text"
+        label="CEP"
+        onBlur={handleBlur}
+        onChange={(e) => setCEP(e.target.value)}
+        value={CEP}
+        sx={{ gridColumn: "2", width: "700px" }}
+      />
+      <TextField
+        fullWidth
+        type="text"
+        label="Email"
+        onBlur={handleBlur}
+        onChange={(e) => setEmail(e.target.value)}
+        value={email}
+        sx={{ gridColumn: "2", width: "700px" }}
+      />
+      <Button
+        fullWidth
+        type="submit"
+        color="primary"
+        variant="contained"
+        sx={{
+          backgroundColor: shades.primary[400],
+          boxShadow: "none",
+          color: "white",
+          borderRadius: 0,
+          padding: "15px 40px",
+          width: "350px",
+          gridColumn: "2",
+          marginLeft: "170px",
+          marginTop: "25px",
+          marginBottom: "58px",
+        }}
+        onClick={() => navigate("/")}
+      >
+        Fazer cadastro
+      </Button>
+    </Box>
+  );
+};
+
+export default SignIn;

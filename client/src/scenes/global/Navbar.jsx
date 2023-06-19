@@ -53,7 +53,10 @@ const Navbar = () => {
               <LocalPhoneOutlined />
             </a>
           </IconButton>
-          <IconButton sx={{ color: "black" }}>
+          <IconButton
+            sx={{ color: "black" }}
+            onClick={() => navigate("/signIn")}
+          >
             <PersonOutline />
           </IconButton>
           <Badge
