@@ -1,4 +1,10 @@
-import { Box, useMediaQuery, TextField, Button } from "@mui/material";
+import {
+  Box,
+  useMediaQuery,
+  TextField,
+  Button,
+  Typography,
+} from "@mui/material";
 import { shades } from "../../theme";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -18,9 +24,15 @@ const SignIn = ({ type, values, errors, touched, handleBlur }) => {
       gap="15px"
       sx={{
         "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
-        margin: "auto",
       }}
     >
+      <Box sx={{ gridColumn: "2" }}>
+        <Typography
+          sx={{ fontSize: "40px", marginLeft: "250px", marginTop: "50px" }}
+        >
+          Seu Perfil:
+        </Typography>
+      </Box>
       <TextField
         fullWidth
         type="text"
@@ -29,7 +41,7 @@ const SignIn = ({ type, values, errors, touched, handleBlur }) => {
         onChange={(e) => setFirstName(e.target.value)}
         value={firstName}
         sx={{
-          marginTop: "150px",
+          marginTop: "50px",
           gridColumn: "2",
           width: "700px",
         }}
@@ -72,11 +84,10 @@ const SignIn = ({ type, values, errors, touched, handleBlur }) => {
           color: "white",
           borderRadius: 0,
           padding: "15px 40px",
-          width: "350px",
+          width: "700px",
           gridColumn: "2",
-          marginLeft: "170px",
-          marginTop: "25px",
-          marginBottom: "58px",
+          marginTop: "30px",
+          marginBottom: "28px",
         }}
         onClick={() => navigate("/")}
       >
