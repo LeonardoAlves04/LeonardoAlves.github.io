@@ -1,6 +1,7 @@
 # Ecommerce feito com React, React router, e utilizando strapi no back-end. 
 
-*Link do projeto: https://ecommerce-react-qklfm1dnd-leonardoalves04.vercel.app
+*Link do projeto: [ecommerce-react-3sa3dua9a-leonardoalves04.vercel.app](https://ecommerce-react-woad.vercel.app)
+
 
 #
 
