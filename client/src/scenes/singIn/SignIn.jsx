@@ -18,12 +18,8 @@ const SignIn = ({ type, values, errors, touched, handleBlur }) => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
-  const homePage = () => {
+  const backToHomePage = () => {
     navigate("/");
-  };
-
-  const validation = () => {
-    alert("Cadastro feito com sucesso");
   };
 
   return (
@@ -97,7 +93,7 @@ const SignIn = ({ type, values, errors, touched, handleBlur }) => {
           marginTop: "30px",
           marginBottom: "28px",
         }}
-        onClick={() => homePage()}
+        onClick={() => backToHomePage()}
       >
         Fazer cadastro
       </Button>
