@@ -62,7 +62,7 @@ const ItemDetails = () => {
         <Box flex="1 1 50%" mb="40px">
           <Box display="flex" justifyContent="space-between">
             <Box>Home/Item</Box>
-            <Box>Prev Next</Box>
+            <Box>Voltar Próximo</Box>
           </Box>
 
           <Box m="65px 0 25px 0">
@@ -129,7 +129,7 @@ const ItemDetails = () => {
         {value === "description" && (
           <div>{item?.attributes?.longDescription}</div>
         )}
-        {value === "reviews" && <div>Avaliações dos nossos clientes</div>}
+        {value === "reviews" && <div>Avaliações dos nossos clientes:</div>}
       </Box>
 
       {/* ITENS RELACIONADOS */}

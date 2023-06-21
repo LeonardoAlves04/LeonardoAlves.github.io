@@ -9,7 +9,7 @@ import { shades } from "../../theme";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = ({ type, values, errors, touched, handleBlur }) => {
+const SignIn = ({ type, handleBlur }) => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const [firstName, setFirstName] = useState("");
