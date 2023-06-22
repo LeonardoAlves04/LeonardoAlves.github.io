@@ -7,10 +7,10 @@ module.exports = [
       settings: {
         cors: {
           enabled: true,
-          origin: ["https://ecommerce-react-woad.vercel.app"], // Adicione aqui o domínio do seu aplicativo React
+          origin: ['*']
         },
       },
-      origin: 'https://ecommerce-react-woad.vercel.app',
+      origin: '*',
       expose: ['WWW-Authenticate', 'Server-Authorization'],
       maxAge: 31536000,
       credentials: true,

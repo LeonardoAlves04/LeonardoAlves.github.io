@@ -15,10 +15,14 @@ const ShoppingList = () => {
   };
 
   async function getItems() {
-    const items = await fetch("/my-strapi-project/api/items?populate=image", {
-      method: "GET",
-    });
+    const items = await fetch(
+      "http://localhost:1337/api/items?populate=image",
+      {
+        method: "GET",
+      }
+    );
     const itemsJson = await items.json();
+    console.log(items);
     dispatch(setItems(itemsJson.data));
   }
 
