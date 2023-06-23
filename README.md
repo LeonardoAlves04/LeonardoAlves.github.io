@@ -16,8 +16,9 @@
 
 
 * Formulários para compra:
-![6](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/3c3f2df9-ab93-46b6-8284-65ef5310ba37)
-![8](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/a85228f0-874f-45ba-ae09-2334781c47bb)
+![Captura de Tela (243)](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/829face8-cefc-48be-b550-2734faa2a6bd)
+![Captura de Tela (244)](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/39e21126-b55f-43f7-a207-e97037258c11)
+
 
 * Área de pagamento com stripe:
 ![7](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/52ea55c1-5789-4468-9afc-878e16da02a8)
