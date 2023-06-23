@@ -32,9 +32,9 @@ const SignIn = ({ type, handleBlur }) => {
     >
       <Box sx={{ gridColumn: "2" }}>
         <Typography
-          sx={{ fontSize: "40px", marginLeft: "250px", marginTop: "50px" }}
+          sx={{ fontSize: "40px", marginLeft: "220px", marginTop: "50px" }}
         >
-          Seu Perfil:
+          Seu Cadastro:
         </Typography>
       </Box>
       <TextField
