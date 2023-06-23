@@ -6,9 +6,10 @@
 #
 
 * Fotos do projeto: (Tela inicial)
-![1](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/ddc18719-c8cc-4691-a335-c4daf261bd93)
-![2](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/43ef6cc3-ca9e-4fa7-bcfa-30a3d0ad53a5)
-![3](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/a3fef03c-5cec-4a58-945d-c2b42dfead3f)
+![Captura de Tela (239)](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/ba73960b-c496-422d-90e8-00b37dc69550)
+![Captura de Tela (240)](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/c50329f4-c92e-48a6-8c42-59cc5ccb8568)
+![Captura de Tela (241)](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/ed8d5257-d989-4414-b98d-0a1dd91636de)
+
 
 * Carrinho com os produtos:
 ![9](https://github.com/LeonardoAlves04/ecommerceReact/assets/69488943/84b6c5c6-5997-4045-970c-8e4388188539)
