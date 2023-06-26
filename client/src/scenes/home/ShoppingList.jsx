@@ -45,6 +45,7 @@ const ShoppingList = () => {
       <Typography variant="h3" textAlign="center">
         Produtos em <b>destaque</b>
       </Typography>
+      <Product />
       <Tabs
         textColor="primary"
         indicatorColor="primary"
