@@ -16,7 +16,7 @@ const ShoppingList = () => {
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
+      "https://ecommerce-react-woad.vercel.app/api/items?populate=image",
       {
         method: "GET",
       }
