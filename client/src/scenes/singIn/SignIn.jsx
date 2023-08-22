@@ -8,19 +8,19 @@ import {
 import { shades } from "../../theme";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-toastify"
 
 const SignIn = ({ type, handleBlur }) => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [CEP, setCEP] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
-
-  const backToHomePage = () => {
-    navigate("/");
-  };
+  const notifyAndRedirect= ()=> {
+    navigate("/")
+    toast.success("Cadastro feito com sucesso, boas compras!")
+  }
 
   return (
     <Box
@@ -93,7 +93,7 @@ const SignIn = ({ type, handleBlur }) => {
           marginTop: "30px",
           marginBottom: "28px",
         }}
-        onClick={() => backToHomePage()}
+        onClick={notifyAndRedirect }
       >
         Fazer cadastro
       </Button>
